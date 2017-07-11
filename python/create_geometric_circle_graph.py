@@ -20,7 +20,7 @@ def main(vertex_count, neighbors, distance, undirected, append_attributes, outpu
 	write_graph(graph, output_file, output_type)
 
 if __name__ == "__main__":
-	parser = argparse.ArgumentParser(description="Graph to RDF Converter", formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+	parser = argparse.ArgumentParser(description="Circular Geometric Graph Creator", formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
 	parser.add_argument("-o", "--output-file",                metavar="outfile", help="output graph name, standard out by default")
 	parser.add_argument("-ot", "--output-type", default=None, metavar="type",    help="output type", choices=['a','b','c'])

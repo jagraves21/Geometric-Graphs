@@ -10,8 +10,6 @@ def main(vertex_count, neighbors, distance, undirected, append_attributes, outpu
 	else:
 		graph = generate_geometric_circle_graph(networkx.DiGraph(), vertex_count, neighbors, distance)
 	
-	print graph.nodes(data=True)
-
 	if not output_file:
 		output_file = "/dev/stdout"
 		if not output_type:
@@ -22,8 +20,8 @@ def main(vertex_count, neighbors, distance, undirected, append_attributes, outpu
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser(description="Circular Geometric Graph Creator", formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
-	parser.add_argument("-o", "--output-file",                metavar="outfile", help="output graph name, standard out by default")
-	parser.add_argument("-ot", "--output-type", default=None, metavar="type",    help="output type", choices=['a','b','c'])
+	parser.add_argument("-o",  "--output-file",               metavar="outfile", help="output graph name, standard out by default")
+	parser.add_argument("-ot", "--output-type", default=None, metavar="type",    help="output type")
 	
 	parser.add_argument("-v", "--vertex-count", type=int,   default=100,  metavar="n", help="number of vertices")
 	parser.add_argument("-n", "--neighbors",    type=int,   default=5,    metavar="n", help="number of neighbors")
